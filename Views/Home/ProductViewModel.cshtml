@@ -1,0 +1,24 @@
+﻿@page
+@model IEnumerable<ErrorViewModel> // ProductViewModel'e uygun bir model kullanılmalı
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="@product.Price" class="card-img-top" alt="@product.Name">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">@product.Category</p>
+                    <p class="card-text">@product.Price.ToString("C")</p>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productDetailModal">Detail</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

@@ -1,0 +1,17 @@
+﻿@page
+@model ErrorViewModel // ProductDetailViewModel'e uygun bir model kullanılmalı
+
+@{
+    ViewData["Title"] = "Product Detail";
+}
+
+<div class="card">
+    <img src="@Model.ShowRequestId" class="card-img-top" alt="@Model.Name">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Category</p>
+        <p class="card-text">@Model.Price.ToString("C")</p>
+        <p class="card-text">@Model.Description</p>
+        <!-- Diğer ürün detayları buraya eklenebilir -->
+    </div>
+</div>

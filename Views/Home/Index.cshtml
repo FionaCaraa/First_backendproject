@@ -1,0 +1,9 @@
+﻿@model First_backend.Models.ProductViewModel
+@{
+    ViewData["Title"] = "Product Page";
+}
+
+<div class="product-container" id="products">
+    <!-- Product items will be injected here by JavaScript -->
+    @Model.CategoryName
+</div>
